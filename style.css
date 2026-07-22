@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header{
+    background: #0d6efd;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.profile-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 15px;
+}
+
+section{
+    width: 80%;
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    background: #0d6efd;
+    color: white;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer{
+    text-align: center;
+    background: #0d6efd;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+button{
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #084298;
+}
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:65px;
+height:65px;
+
+background:#25D366;
+color:white;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:35px;
+
+text-decoration:none;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+z-index:1000;
+
+animation:pulse 2s infinite;
+
+transition:.3s;
+
+}
+
+.whatsapp{
+
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:65px;
+height:65px;
+
+background:#25D366;
+color:white;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:35px;
+
+text-decoration:none;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+z-index:1000;
+
+animation:pulse 2s infinite;
+
+transition:.3s;
+
+}
+/* Styling-ka Batoonka Sabaynaya (Floating Button) */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;       /* Masaafada hoose */
+  right: 20px;        /* Masaafada ka xigta midigta */
+  width: 60px;
+  height: 60px;
+  background-color: #25d366; /* Midabka WhatsApp-ka */
+  color: #ffffff;
+  border-radius: 50%; /* Wuxuu ka dhigayaa goobo/circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hooska ama shadow-ka */
+  z-index: 1000;      /* Wuxuu ka dhigayaa inuu koodhadhka kale oo dhan ka sarreeyo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Svg icon sizing */
+.whatsapp-btn svg {
+  width: 35px;
+  height: 35px;
+}
+
+/* Markii tusuhu (mouse hover) dusha laga saaro */
+.whatsapp-btn:hover {
+  transform: scale(1.1); /* Wuxuu kor u siinayaa xoogaa weynaan ah */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+/* Styling-ka Batoonka Sabaynaya */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  
+  /* Halkan ka bilow Animation-ka Pulsing-ka ah */
+  animation: pulse-animation 2s infinite;
+}
+
+.whatsapp-btn svg {
+  width: 35px;
+  height: 35px;
+}
+
+/* 1. Animation-ka Pulsing (Dhaqdhaqaaqa Weynaanta iyo Hooska) */
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); /* Mawjadaha midabka leh */
+    transform: scale(1.05); /* Wuxuu noqonayaa xoogaa weyn */
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    transform: scale(1);
+  }
+}
+/* Haddii aad Ruxruxma dooneyso, koodhkan `@keyframes` ugu dar CSS-kaaga: */
+@keyframes shake-animation {
+  0%, 100% { transform: rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: rotate(-10deg); }
+  20%, 40%, 60%, 80% { transform: rotate(10deg); }
+}
+
+/* Markaas `animation:` ka dhex jira `.whatsapp-btn` ku beddel kan: */
+.whatsapp-btn {
+  /* Koodhadhkii hore... */
+  animation: shake-animation 3s infinite ease-in-out;
+}
+/* Styling-ka Sawirka Profaylka */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff; /* Xadka cad */
+  
+  /* Animation-ka Profile Pulse */
+  animation: profile-glow 3s infinite ease-in-out;
+  transition: transform 0.4s ease;
+}
+
+/* Markii Moust-ka ama Farta Laga Saaro (Hover) */
+.profile-img:hover {
+  transform: scale(1.08) rotate(3deg); /* Wuu yar weynaanayaa xoogaana wuu leexanayaa */
+}
+
+/* 🌟 Keyframes Animation-ka Glow-ga ah */
+@keyframes profile-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8),
+                0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0),
+                0 12px 25px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0),
+                0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+/* Mid ka dhigaya inuu bogga marka la furo sare ka soo dhaco */
+.profile-img {
+  animation: slideDown 1s cubic-bezier(0.175, 0.885, 0.32, 1.27) forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Style-ka aasaasiga ah ee qaybaha (Cards) */
+.card-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Class-kan marka JS-ku ku daro qaybta, animation-ka ayaa bilaabanaya */
+.card-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Effect: Marka mouse-ka la dul geeyo ama farta la saaro */
+.card-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
